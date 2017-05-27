@@ -1,6 +1,10 @@
+import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
-
+logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s',
+                    level=logging.INFO,
+                    filename='bot.log'
+                    )
 
 
 def main():
@@ -22,8 +26,9 @@ def show_error(bot, update, error):
     print(error)
 
 def talk_to_me(bot, update):
-    print(update.message.text)
-    bot.sendMessage(update.message.chat_id, update.message.text)
+    user_text = update.message.text 
+    print(user_text)
+    update.message.reply_text(user_text)
 
 
 main()
