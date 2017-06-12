@@ -1,2 +1,4 @@
 *.log
 .idea/
+lesson1/telegram_bot/tel_bot_env/
+lesson1/telegram_bot/__pycache__/

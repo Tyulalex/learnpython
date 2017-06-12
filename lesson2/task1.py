@@ -22,7 +22,7 @@ if __name__ == '__main__':
     for profession, age_range in PROF_TO_AGE_RANGE_MAP.items():
         if age_range[0] <= age <= age_range[1]:
             print(profession)
-            sys.exit(1)
+            sys.exit()
     print(
         "Род занятий не определен для вашего возраста: {age}". format(
             age=age))
